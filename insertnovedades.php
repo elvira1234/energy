@@ -1,4 +1,4 @@
-<form action="VacunateRD.html" id="formulariocon" method="POST">
+
 
 <?php
 if(isset($_POST['submit'])){
@@ -7,16 +7,16 @@ $cedula = $_POST['cedula'];
 $correo = $_POST['correo'];
 $fechadenacimiento = $_POST['fechadenacimiento'];
 $deseavacunarse = $_POST['deseavacunarse'];
-$razonselectenfermedad = $_POST['razonselectenfermedad'];
+$razonselectenfermedad = $_POST['razon'];
 $trabajasactualmente = $_POST['trabajasactualmente'];
 $descripciondelcaso = $_POST['descripciondelcaso'];
 
-if (!empty($fechadenacimientocunado) || !empty($descripciondelcaso) || !empty($nombreCompleto) || !empty($cedula) || !empty($deseavacunarse) || !empty($razonselectenfermedad) ||  !empty($correo) || !empty($trabajasactualmente)) {
+if (!empty($fechadenacimiento) || !empty($descripciondelcaso) || !empty($nombreCompleto) || !empty($cedula) || !empty($deseavacunarse) || !empty($razon) ||  !empty($correo) || !empty($trabajasactualmente)) {
  
 $db_host        = '127.0.0.1';
-$db_user        = 'Desarrollo';
-$db_pass        = 'Code1234,';
-$db_database    = 'pscloud'; 
+$db_user        = 'massiel';
+$db_pass        = '123456,';
+$db_database    = 'pruebas'; 
 $db_port        = '3306';
 
 $conn = new mysqli($db_host,$db_user,$db_pass,$db_database,$db_port);
@@ -24,10 +24,10 @@ $conn = new mysqli($db_host,$db_user,$db_pass,$db_database,$db_port);
     if (mysqli_connect_error()) {
      die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
     } else {
-     $INSERT = "INSERT Into pscloud.VacunateRD (razonnovacunado, nombreCompleto, cedula, deseavacunarse, dosis, codcentro) values(?, ?, ?, ?, ?, ?, ?, ?)";
+     $INSERT = "INSERT Into pruebas.`vacunate rd` (razon, nombrecompleto, cedula, deseavacunarse, descripciondelcaso, correo, fechadenacimiento, trabajasactualmente) values(?, ?, ?, ?, ?, ?, ?, ?)";
      //Prepare statement
       $stmt = $conn->prepare($INSERT);
-      $stmt->bind_param("ssssssss", $razonselectenfermedad, $nombreCompleto, $cedula, $fechadenacimiento, $trabajasactualmente, $deseavacunarse, $descripciondelcaso, $correo);
+      $stmt->bind_param("ssssssss", $razon, $nombreCompleto, $cedula, $fechadenacimiento, $trabajasactualmente, $deseavacunarse, $descripciondelcaso, $correo);
       $stmt->execute();
 	  echo "<br>";
 	  echo "<br>";

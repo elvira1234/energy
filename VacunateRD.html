@@ -40,21 +40,21 @@
 
 
 <legend><b>Desea Vacunarse?</b></legend>  <br/> 
-<input type="radio" id="yes" name="Desea Vacunarse?" value="si" required> 
+<input type="radio" id="yes" name="Deseavacunarse" value="si" required> 
 <label for="yes">Si</label>
 <br/> <br/>
 
-<input type="radio" id="no" name="Desea Vacunarse?" value="Negativo" required> 
+<input type="radio" id="no" name="Deseavacunarse" value="Negativo" required> 
 <label for="no">No</label>
 <br/> <br/> <br/> <br/>
 
 <legend><b>Razon. Select/Enfermedad</b></legend>  <br/> 
 
-<input type="radio"  id="covid19" name="razon.select/enfermedad" value="Covid19" required>
+<input type="radio"  id="covid19" name="razon" value="Covid19" required>
 <label for="covid19">COVID19</label>
 <br/> <br/>
 
-<input type="radio"  id="accesvacunate" name="razon.select/enfermedad"  value="Accesovacunate" required>
+<input type="radio"  id="accesvacunate" name="razon"  value="Accesovacunate" required>
 <label for="accesvacunate">Acceso Vacunate</label>
 <br/> <br/>
 <br/> <br/>
@@ -78,7 +78,7 @@
 <br/> <br/> 
 <label for="Descripcion"><b>Descripcion del Caso:</b></label>
 <br/> <br/> 
-<textarea id="Descripcion"  name="Descripcion del Caso" rows="4" cols="55" >
+<textarea id="Descripcion"  name="Descripciondelcaso" rows="4" cols="55" >
 </textarea>
 <br/> <br/>
 
@@ -93,6 +93,8 @@
            <b>Alerta. Debe vacunarse en los próximos 10 días.</b> </div>
         </div></div>
 
+        <form action="insertnovedades.php" id="formulariocon" method="POST">
+
         <div class="container-fluid">
         <div align="center">
             <input type="submit" class="boton_personalizado" name="submitced" value="Enviar" />
@@ -100,7 +102,7 @@
         
 
      
-            <form action="VacunateRD.html" id="formulariocon" method="POST">
+           
 
 
 
