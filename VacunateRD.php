@@ -11,27 +11,28 @@
 </head>>
 
 <body>
+
     <h2> <big>Vacunate RD</big></h2>
-<form>
-<label for="name"><b>Nombre Completo:</b></label>
-<input type="text" id="name" required/>
+<form action="insertnovedades.php" id="formulariocon" method="POST">>
+<label for="nombre"><b>Nombre Completo:</b></label>
+<input type="text" id="name" name="Nombrecompleto" required/>
 
 <br/> <br/>
 <label for="Cedula"><b>Cedula:</b></label>
-<input type="number" id="Cedula" min="11" max="11" step="11" required/> 
+<input type="number" id="Cedula" name="Cedula" minlenght="11" maxlenght="11" required/> 
 
 
 <br/> <br/>
 
 <label for="email"> <b>Correo:</b></label>
-<input type="correo" id="email" required>
+<input type="correo" id="email" name="Correo" required>
 
 <br/> <br/>
 <div class="container">
     <div class="row"> <b>Fecha de Nacimiento:</b>  </div>
-      <div class="row"><div class='col-sm-3'>  <div class="form-group">
-                  <div class='input-group date' id='datetimepicker1'>
-                      <input type='text' class="form-control" />
+      <!-- <div class="row"><div class='col-sm-3'>  <div class="form-group">
+                  <div class='input-group date' id='datetimepicker1'> -->
+                      <input type='text' class="form-control" name="Fechadenacimiento" id="Fechadenacimiento"/>
                       <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                       </span>
          </div> </div> </div>   </div></div>
@@ -93,59 +94,16 @@
            <b>Alerta. Debe vacunarse en los próximos 10 días.</b> </div>
         </div></div>
 
-        <form action="insertnovedades.php" id="formulariocon" method="POST">
+        
 
         <div class="container-fluid">
         <div align="center">
             <input type="submit" class="boton_personalizado" name="submitced" value="Enviar" />
             </div> </div>
-        
-
-     
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 </form>
-
-
-
-
-
-
-
-
-
-
 
 
 

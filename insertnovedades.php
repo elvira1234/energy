@@ -2,7 +2,7 @@
 
 <?php
 if(isset($_POST['submit'])){
-$nombreCompleto = $_POST['nombreCompleto'];
+$nombreCompleto = $_POST['nombrecompleto'];
 $cedula = $_POST['cedula'];
 $correo = $_POST['correo'];
 $fechadenacimiento = $_POST['fechadenacimiento'];
@@ -11,7 +11,7 @@ $razonselectenfermedad = $_POST['razon'];
 $trabajasactualmente = $_POST['trabajasactualmente'];
 $descripciondelcaso = $_POST['descripciondelcaso'];
 
-if (!empty($fechadenacimiento) || !empty($descripciondelcaso) || !empty($nombreCompleto) || !empty($cedula) || !empty($deseavacunarse) || !empty($razon) ||  !empty($correo) || !empty($trabajasactualmente)) {
+if (!empty($fechadenacimiento) || !empty($descripciondelcaso) || !empty($nombrecompleto) || !empty($cedula) || !empty($deseavacunarse) || !empty($razon) ||  !empty($correo) || !empty($trabajasactualmente)) {
  
 $db_host        = '127.0.0.1';
 $db_user        = 'massiel';
@@ -24,10 +24,10 @@ $conn = new mysqli($db_host,$db_user,$db_pass,$db_database,$db_port);
     if (mysqli_connect_error()) {
      die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
     } else {
-     $INSERT = "INSERT Into pruebas.`vacunate rd` (razon, nombrecompleto, cedula, deseavacunarse, descripciondelcaso, correo, fechadenacimiento, trabajasactualmente) values(?, ?, ?, ?, ?, ?, ?, ?)";
+     $INSERT = "INSERT Into pruebas.`vacunate rd` (razon, nombreCompleto, cedula, deseavacunarse, descripciondelcaso, correo, fechadenacimiento, trabajasactualmente) values(?, ?, ?, ?, ?, ?, ?, ?)";
      //Prepare statement
       $stmt = $conn->prepare($INSERT);
-      $stmt->bind_param("ssssssss", $razon, $nombreCompleto, $cedula, $fechadenacimiento, $trabajasactualmente, $deseavacunarse, $descripciondelcaso, $correo);
+      $stmt->bind_param("ssssssss", $razon, $nombrecompleto, $cedula, $fechadenacimiento, $trabajasactualmente, $deseavacunarse, $descripciondelcaso, $correo);
       $stmt->execute();
 	  echo "<br>";
 	  echo "<br>";
