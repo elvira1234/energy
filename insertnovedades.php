@@ -15,7 +15,7 @@ if (!empty($fechadenacimiento) || !empty($descripciondelcaso) || !empty($nombrec
  
 $db_host        = '127.0.0.1';
 $db_user        = 'massiel';
-$db_pass        = '123456,';
+$db_pass        = '123456';
 $db_database    = 'pruebas'; 
 $db_port        = '3306';
 
@@ -24,7 +24,7 @@ $conn = new mysqli($db_host,$db_user,$db_pass,$db_database,$db_port);
     if (mysqli_connect_error()) {
      die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
     } else {
-     $INSERT = "INSERT Into pruebas.`vacunate rd` (razon, nombreCompleto, cedula, deseavacunarse, descripciondelcaso, correo, fechadenacimiento, trabajasactualmente) values(?, ?, ?, ?, ?, ?, ?, ?)";
+     $INSERT = "INSERT Into pruebas.vacunate rd (razon, nombreCompleto, cedula, deseavacunarse, descripciondelcaso, correo, fechadenacimiento, trabajasactualmente) values(?, ?, ?, ?, ?, ?, ?, ?)";
      //Prepare statement
       $stmt = $conn->prepare($INSERT);
       $stmt->bind_param("ssssssss", $razon, $nombrecompleto, $cedula, $fechadenacimiento, $trabajasactualmente, $deseavacunarse, $descripciondelcaso, $correo);
@@ -33,6 +33,7 @@ $conn = new mysqli($db_host,$db_user,$db_pass,$db_database,$db_port);
 	  echo "<br>";
       echo "<br>";
 	  echo "<br>";
+      echo "<br>";
 	  echo "<br>";
 	  echo "<br>";
 	  echo "<br>";

@@ -32,7 +32,7 @@
     <div class="row"> <b>Fecha de Nacimiento:</b>  </div>
       <!-- <div class="row"><div class='col-sm-3'>  <div class="form-group">
                   <div class='input-group date' id='datetimepicker1'> -->
-                      <input type='text' class="form-control" name="Fechadenacimiento" id="Fechadenacimiento"/>
+                      <input type='text' class="form-control" name="FechadeNacimiento" id="FechadeNacimiento"/>
                       <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                       </span>
          </div> </div> </div>   </div></div>
@@ -41,38 +41,38 @@
 
 
 <legend><b>Desea Vacunarse?</b></legend>  <br/> 
-<input type="radio" id="yes" name="Deseavacunarse" value="si" required> 
+<input type="radio" id="yes" name="DeseaVacunarse" value="si" required> 
 <label for="yes">Si</label>
 <br/> <br/>
 
-<input type="radio" id="no" name="Deseavacunarse" value="Negativo" required> 
+<input type="radio" id="no" name="DeseaVacunarse" value="no" required> 
 <label for="no">No</label>
 <br/> <br/> <br/> <br/>
 
 <legend><b>Razon. Select/Enfermedad</b></legend>  <br/> 
 
-<input type="radio"  id="covid19" name="razon" value="Covid19" required>
+<input type="radio"  id="covid19" name="Razon" value="Covid19" required>
 <label for="covid19">COVID19</label>
 <br/> <br/>
 
-<input type="radio"  id="accesvacunate" name="razon"  value="Accesovacunate" required>
+<input type="radio"  id="accesvacunate" name="Razon"  value="Accesovacunate" required>
 <label for="accesvacunate">Acceso Vacunate</label>
 <br/> <br/>
 <br/> <br/>
 
 <legend><b>Trabajas Actualmente?</b></legend> 
 
-<input type="radio" id="yes" name="TrabajasActualmente?" value="Yes"  required>
+<input type="radio" id="yes" name="Trabajasactualmente" value="si"  required>
 <label for="yes">Si</label>
 <br/> <br/>
 
 
-<input type="radio" id="no" name="TrabajasActualmente?" value="Negativo"  required>
+<input type="radio" id="no" name="Trabajasactualmente" value="no"  required>
 <label for="no">No</label>
 <br/> <br/>
 
 
-<input type="radio" id="proximamente" name="TrabajasActualmente?" value="pronto" required>
+<input type="radio" id="proximamente" name="Trabajasactualmente" value="pronto" required>
 <label for="proximamente">Proximamente</label>
 <br/> <br/>
 
@@ -98,7 +98,7 @@
 
         <div class="container-fluid">
         <div align="center">
-            <input type="submit" class="boton_personalizado" name="submitced" value="Enviar" />
+            <input type="submit" class="boton_personalizado" name="submit" value="Enviar" />
             </div> </div>
 
 
