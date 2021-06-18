@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initiel-scale=1.0">
+<title>AlertasJS</title>
+
+
+
+
+<!-- al principio dentro de head -->
+<style>
+
+
+      .alert {
+
+  padding: 20px;
+
+  background-color: #f44336;
+
+  color: white;
+
+}
+
+</style>
+
+
+<h2>Operativo VACUNATE RD</h2>
+
+<!-- como llamar desde un radio button -->
+
+
+              <div class="col-xs-2">
+
+          <label for="vacunate"><b>1-Desea vacunarse?</b></label>
+
+        <div>
+
+        <input type="radio" name="vacunate"  value="No" id="vacunate"  />
+
+                <label for="vacunate">No</label>
+
+              </div>
+
+              <div>
+
+                <input  type="radio" value="Si" onclick="myFunction()" id="vacunate" name="vacunate" />
+
+                <label for="vacunate">Si</label>
+
+              </div>
+
+              </div>
+
+               </div>
+
+<!-- alerta -->
+
+       <div display="none" class="col-xs-12">
+
+        <div ID="alertavacunate" style="display:none;" class="alert">
+
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+
+  <strong>Recordatorio: </strong> Vaya al centro mas cercano, en su comunidad.
+
+</div>
+
+</div> 
+
+<!-- al final es script -->
+
+
+
+
+<br/> <br/>
+
+
+
+<div class="col-xs-3">
+
+  <label for="mayor"><b>2-Es usted mayor de 18 años?</b></label>
+
+<div>
+
+<input type="radio" name="mayor"  value="Si"  id="mayor"  />
+
+        <label for="mayor">Si</label>
+
+      </div>
+
+      <div>
+
+        <input  type="radio" value="No" onclick="myFunction2()" id="mayor" name="mayor" />
+
+        <label for="mayor">No</label>
+
+      </div>  </div> </div>
+
+
+       <div display="none" class="col-xs-13">
+
+        <div ID="alertamayor" style="display:none;" class="alert">
+
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+
+  <strong>Recordatorio: </strong> No tiene que vaacunarse.
+
+</div></div> 
+<br/> <br/>
+
+
+
+<div class="col-xs-3">
+
+  <label for="mayor"><b>3-Usted toma bebidas alcoholicas?</b></label>
+
+<div>
+
+<input type="radio" name="toma"  value="Si" onclick="myFunction3()" id="toma"  />
+
+        <label for="toma">Si</label>
+
+      </div>
+
+      <div>
+
+        <input  type="radio" value="No"  id="toma" name="toma" />
+
+        <label for="toma">No</label>
+
+      </div></div> </div>
+
+
+       <div display="none" class="col-xs-13">
+
+        <div ID="alertatoma" style="display:none;" class="alert">
+
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+
+  <strong>Recordatorio: </strong> Tomar, es perjudicial para la salud. Ley 4201
+
+</div></div> 
+
+<br/> <br/>
+
+
+
+<div class="col-xs-3">
+
+  <label for="mayor"><b>4-Usted fuma ?</b></label>
+
+<div>
+
+<input type="radio" name="fuma"  value="Si" onclick="myFunction4()" id="fuma"  />
+
+        <label for="fuma">Si</label>
+
+      </div>
+
+      <div>
+
+        <input  type="radio" value="No"  id="mayor" name="fuma" />
+
+        <label for="fuma">No</label>
+
+      </div>  </div> </div>
+
+
+       <div display="none" class="col-xs-13">
+
+        <div ID="alertafuma" style="display:none;" class="alert">
+
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+
+  <strong>Recordatorio: </strong> Fumar, es perjudicial para la salud. Ley 4201
+
+
+</div></div> 
+<br/> <br/>
+
+<div class="col-xs-3">
+
+  <label for="mayor"><b>5-Toda su familia, ya se vacuno?</b></label>
+
+<div>
+
+<input type="radio" name="familia"  value="Si, excepto los niños"  id="mayor"  />
+
+        <label for="mayor">Si, excepto lo niños</label>
+
+      </div>
+
+      <div>
+
+        <input  type="radio" value="No, solo yo" onclick="myFunction5()" id="familia" name="familia" />
+
+        <label for="familia">No, solo yo</label>
+
+      </div>  </div> </div>
+
+
+       <div display="none" class="col-xs-13">
+
+        <div ID="alertafamilia" style="display:none;" class="alert">
+
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+
+  <strong>Recordatorio: </strong> Deben de vacunarse, lo mas rapido posible.
+
+</div></div> 
+<br/> <br/>
+
+
+              <div class="col-xs-2">
+
+          <label for="personas"><b>6-Cuantas personas viven con usted?</b></label>
+
+        <div>
+
+        <input type="radio" name="personas"  value="mas de 5" onclick="myFunction6()"id="personas"  />
+
+                <label for="personas">mas de 5</label>
+
+              </div>
+
+              <div>
+
+                <input  type="radio" value="menos de 5"  id="personas" name="personas" />
+
+                <label for="personas">menos de 5</label>
+
+              </div>
+
+              </div>
+
+               </div>
+
+<!-- alerta -->
+
+       <div display="none" class="col-xs-12">
+
+        <div ID="alertapersonas" style="display:none;" class="alert">
+
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+
+  <strong>Recordatorio: </strong> Vacunate RD2
+</div>
+
+</div> 
+
+</div></div> 
+<br/> <br/>
+
+
+              <div class="col-xs-2">
+
+          <label for="practica"><b>7-Usted practica algun deporte?</b></label>
+
+        <div>
+
+        <input type="radio" name="practica"  value="No" onclick="myFunction7()" id="practica"  />
+
+                <label for="practica">No</label>
+
+              </div>
+
+              <div>
+
+                <input  type="radio" value="Si"  id="practica" name="practica" />
+
+                <label for="practica">Si</label>
+
+              </div>
+
+              </div>
+
+               </div>
+
+
+
+       <div display="none" class="col-xs-12">
+
+        <div ID="alertapractica" style="display:none;" class="alert">
+
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+
+  <strong>Recordatorio: </strong> Ejercitarse, es bueno para la salud.
+
+</div>
+
+</div> 
+
+<br/> <br/>
+
+<div class="col-xs-2">
+
+  <label for="pais"><b>8-Alguna vez haz visitado otro pais?</b></label>
+
+<div>
+
+<input type="radio" name="pais"  value="No" onclick="myFunction8()" id="pais"  />
+
+        <label for="pais">No</label>
+
+      </div>
+
+      <div>
+
+        <input  type="radio" value="Si"  id="pais" name="pais" />
+
+        <label for="pais">Si</label>
+
+      </div>
+
+      </div>
+
+       </div>
+
+
+
+<div display="none" class="col-xs-12">
+
+<div ID="alertapais" style="display:none;" class="alert">
+
+<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+
+<strong>Recordatorio: </strong> Espero que vayas pronto.
+</div>
+
+</div> 
+
+
+<br/>
+<br/>
+              <div class="col-xs-2">
+
+          <label for="hijos"><b>9-Cuantas hijos usted tiene ?</b></label>
+
+        <div>
+
+        <input type="radio" name="hijos"  value="si"  id="hijos"  />
+
+                <label for="hijos">Si</label>
+
+              </div>
+
+              <div>
+
+                <input  type="radio" value="no tengo" onclick="myFunction9()" id="hijos" name="hijos" />
+
+                <label for="hijos">no tengo</label>
+
+              </div>
+
+              </div>
+
+               </div>
+
+<br/> 
+<br/>
+
+       <div display="none" class="col-xs-12">
+
+        <div ID="alertahijos" style="display:none;" class="alert">
+
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+
+  <strong>Recordatorio: </strong> Obvie esta pregunta.
+</div>
+
+</div> 
+
+
+<div class="col-xs-2">
+
+  <label for="acuerdo"><b>10-Esta usted de acuerdo con la vacuna?</b></label>
+
+<div>
+
+<input type="radio" name="acuerdo"  valueijos="si"  id="acuerdo"  />
+
+        <label for="acuerdo">Si</label>
+
+      </div>
+
+      <div>
+
+        <input  type="radio" value="no" onclick="myFunction10()" id="acuerdo" name="acuerdo" />
+
+        <label for="hijos">no</label>
+
+      </div>
+
+      </div>
+
+       </div>
+
+
+<div display="none" class="col-xs-12">
+
+<div ID="alertaacuerdo" style="display:none;" class="alert">
+
+<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+
+<strong>Recordatorio: </strong> Debes de vacunar, por la salud de todo.
+</div>
+
+</div> 
+
+
+
+
+
+
+
+
+<script> 
+
+function myFunction() {
+
+var x = document.getElementById("alertavacunate");
+
+if (x.style.display === "none") {
+
+  x.style.display = "block";
+
+} else {
+
+  x.style.display = "none";
+
+}
+
+}
+
+
+  function myFunction2() {
+  
+    var x = document.getElementById("alertamayor");
+  
+    if (x.style.display === "none") {
+  
+      x.style.display = "block";
+  
+    } else {
+  
+      x.style.display = "none";
+  
+    }
+  
+  }
+
+  function myFunction3() {
+  
+  var x = document.getElementById("alertatoma");
+
+  if (x.style.display === "none") {
+
+    x.style.display = "block";
+
+  } else {
+
+    x.style.display = "none";
+
+  }
+
+}
+
+function myFunction4() {
+  
+  var x = document.getElementById("alertafuma");
+
+  if (x.style.display === "none") {
+
+    x.style.display = "block";
+
+  } else {
+
+    x.style.display = "none";
+
+  }
+
+}
+
+function myFunction5() {
+  
+  var x = document.getElementById("alertafamilia");
+
+  if (x.style.display === "none") {
+
+    x.style.display = "block";
+
+  } else {
+
+    x.style.display = "none";
+
+  }
+
+}
+
+function myFunction6() {
+  
+  var x = document.getElementById("alertapersonas");
+
+  if (x.style.display === "none") {
+
+    x.style.display = "block";
+
+  } else {
+
+    x.style.display = "none";
+
+  }
+
+}
+function myFunction7() {
+  
+  var x = document.getElementById("alertapractica");
+
+  if (x.style.display === "none") {
+
+    x.style.display = "block";
+
+  } else {
+
+    x.style.display = "none";
+
+  }
+
+}
+function myFunction8() {
+  
+  var x = document.getElementById("alertapais");
+
+  if (x.style.display === "none") {
+
+    x.style.display = "block";
+
+  } else {
+
+    x.style.display = "none";
+
+  }
+
+}
+function myFunction9() {
+  
+  var x = document.getElementById("alertahijos");
+
+  if (x.style.display === "none") {
+
+    x.style.display = "block";
+
+  } else {
+
+    x.style.display = "none";
+
+  }
+
+}
+function myFunction10() {
+  
+  var x = document.getElementById("alertaacuerdo");
+
+  if (x.style.display === "none") {
+
+    x.style.display = "block";
+
+  } else {
+
+    x.style.display = "none";
+
+  }
+
+}
+
+  
+</script>
+</head>
+</html>
