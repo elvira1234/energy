@@ -7,15 +7,16 @@ require 'OAuth.php';
 ?>
 <?php
 if(isset($_POST['submit'])){ 
-$Nombre = $_POST['Nombre'];
-$Apellido = $_POST['Apellido'];
-$Cedula = $_POST['Cedula'];
-$Correo = $_POST['Correo'];
-$DeseainscribirseenelPrograma = $_POST['DeseainscribirseenelPrograma'];
-$Poseetarjetadesuperate = $_POST['Poseetarjetadesuperate'];
-$Tienecomposiciónfamiliar = $_POST['Tienecomposiciónfamiliar'];
+    $Nombre = $_POST['Nombre'];
+    $Apellido = $_POST['Apellido'];
+    $Cedula = $_POST['Cedula'];
+    $Correo = $_POST['Correo'];
+    $DeseainscribirseenelPrograma = $_POST['DeseainscribirseenelPrograma'];
+    $CategoriaSelect = $_POST['CategoriaSelect'];
+    $Poseetarjetadesuperate = $_POST['Poseetarjetadesuperate'];
+    $Tienecomposicionfamiliar = $_POST['Tienecomposicionfamiliar'];
 
-if (!empty($Nombre) || !empty($Apellido) || !empty($Cedula) || !empty($Correo) || !empty($DeseainscribirseenelPrograma) || !empty($Poseetarjetadesuperate)  || !empty($Tienecomposiciónfamiliar)) {
+if (!empty($Nombre) || !empty($Apellido) || !empty($Cedula) || !empty($Correo) || !empty($DeseainscribirseenelPrograma) || !empty($CategoriaSelect)|| !empty($Poseetarjetadesuperate)  || !empty($Tienecomposicionfamiliar)) {
  
 $db_host        = '127.0.0.1';
 $db_user        = 'massiel';
@@ -28,15 +29,16 @@ $conn = new mysqli($db_host,$db_user,$db_pass,$db_database,$db_port);
     if (mysqli_connect_error()) {
      die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
     } else {
-     $INSERT = "INSERT Into pruebas.vacunate_rd3 (Nombre, Apellido, Cedula, Correo, DeseainscribirseenelPrograma, Poseetarjetadesuperate,  Tienecomposiciónfamiliar) values(?, ?, ?, ?, ?, ?, ?)";
+     $INSERT = "INSERT Into dbpruebas.vacunate_rd3 (Nombre, Apellido, Cedula, Correo, DeseainscribirseenelPrograma, CategoriaSelect, Poseetarjetadesuperate, Tienecomposicionfamiliar) values(?, ?, ?, ?, ?, ?, ?, ?)";
      //Prepare statement
       $stmt = $conn->prepare($INSERT);
-      $stmt->bind_param("sssssss", $Nombre, $Apellido, $Cedula, $Correo, $DeseainscribirseenelPrograma, $Poseetarjetadesuperate, $Tienecomposiciónfamiliar);
+      $stmt->bind_param("ssssssss", $Nombre, $Apellido, $Cedula, $Correo, $DeseainscribirseenelPrograma, $CategoriaSelect, $Poseetarjetadesuperate, $Tienecomposicionfamiliar);
       $stmt->execute();
 	  echo "<br>";
 	  echo "<br>";
       echo "<br>";
       echo "<br>";
+	  echo "<br>";
 	  echo "<br>";
 	  echo "<br>";
 	  echo "<br>";
