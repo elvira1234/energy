@@ -4,8 +4,7 @@ require 'Exception.php';
 require 'OAuth.php';
 
 
-?>
-<?php
+
 if(isset($_POST['submit'])){ 
     $Nombre = $_POST['Nombre'];
     $Apellido = $_POST['Apellido'];
