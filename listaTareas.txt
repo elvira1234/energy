@@ -1,0 +1,14 @@
+1. Texto Plano
+2. Texto con formatos de Títulos H1,H2
+3. Tabla con 4x4 y header
+5. Referencias en HTML
+6. Imagenes de diversos tamaño con sentencias width="300px" height="400px"
+7. Sentencias de aliniado align="center"
+8. Separación de Body y Header
+9. fonts
+10. Sections
+11. Iframes
+12. Embebidos
+13. Creación de DB en SQLServer y MySQL
+14. Creación de tablas con estructuras detallas y complejas.
+15. Arquitectura de APPS.
